@@ -1,0 +1,13 @@
+openai
+uvicorn[standard]
+streamlit
+httpx
+sqlalchemy[asyncio]
+asyncpg
+python-dotenv
+fastapi
+mcp
+fastmcp
+pandas
+python-multipart
+sqlglot
