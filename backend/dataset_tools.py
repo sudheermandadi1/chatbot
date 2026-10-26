@@ -26,7 +26,7 @@ MAX_MUTATION_ROWS = 100
 
 TABLE_PATTERN = re.compile(r"dataset_[a-f0-9]{32}\Z")
 
-# Local-development implementation. Pending operations disappear on restart.
+
 _pending_mutations: dict[str, dict[str, Any]] = {}
 
 
@@ -310,7 +310,6 @@ def confirm_dataset_mutation(
 
         rows_affected = result.rowcount
 
-    # Remove the pending operation only after the transaction commits.
     _pending_mutations.pop(pending_id, None)
 
     return {
